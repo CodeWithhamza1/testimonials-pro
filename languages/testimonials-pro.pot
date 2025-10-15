@@ -1,0 +1,148 @@
+# Copyright (C) 2024 Testimonials Pro
+# This file is distributed under the same license as the Testimonials Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Testimonials Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/testimonials-pro\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: testimonials-pro\n"
+
+#: testimonials-pro.php:15
+msgid "Testimonials Pro"
+msgstr ""
+
+#: testimonials-pro.php:16
+msgid "A comprehensive testimonial submission and display system with admin management, analytics, and customizable shortcodes."
+msgstr ""
+
+#: includes/class-shortcodes.php:15
+msgid "Submit Your Testimonial"
+msgstr ""
+
+#: includes/class-shortcodes.php:16
+msgid "Thank you for your testimonial! It will be reviewed before being published."
+msgstr ""
+
+#: includes/class-shortcodes.php:17
+msgid "Full Name"
+msgstr ""
+
+#: includes/class-shortcodes.php:18
+msgid "Email"
+msgstr ""
+
+#: includes/class-shortcodes.php:19
+msgid "Title"
+msgstr ""
+
+#: includes/class-shortcodes.php:20
+msgid "e.g., CEO, Manager, Customer"
+msgstr ""
+
+#: includes/class-shortcodes.php:21
+msgid "Rating"
+msgstr ""
+
+#: includes/class-shortcodes.php:22
+msgid "Your Review"
+msgstr ""
+
+#: includes/class-shortcodes.php:23
+msgid "Tell us about your experience..."
+msgstr ""
+
+#: includes/class-shortcodes.php:24
+msgid "Submit Testimonial"
+msgstr ""
+
+#: includes/class-shortcodes.php:25
+msgid "Submitting..."
+msgstr ""
+
+#: includes/class-shortcodes.php:26
+msgid "No testimonials found."
+msgstr ""
+
+#: includes/class-shortcodes.php:27
+msgid "« Previous"
+msgstr ""
+
+#: includes/class-shortcodes.php:28
+msgid "Next »"
+msgstr ""
+
+#: includes/class-ajax.php:15
+msgid "Security check failed."
+msgstr ""
+
+#: includes/class-ajax.php:16
+msgid "Name is required."
+msgstr ""
+
+#: includes/class-ajax.php:17
+msgid "Valid email is required."
+msgstr ""
+
+#: includes/class-ajax.php:18
+msgid "Review is required."
+msgstr ""
+
+#: includes/class-ajax.php:19
+msgid "Rating must be between 1 and 5."
+msgstr ""
+
+#: includes/class-ajax.php:20
+msgid "Submission rejected as spam."
+msgstr ""
+
+#: includes/class-ajax.php:21
+msgid "Failed to submit testimonial. Please try again."
+msgstr ""
+
+#: includes/class-ajax.php:22
+msgid "Thank you for your testimonial! It will be reviewed before being published."
+msgstr ""
+
+#: includes/class-ajax.php:23
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/class-ajax.php:24
+msgid "New Testimonial Submission from %s"
+msgstr ""
+
+#: includes/class-ajax.php:25
+msgid "A new testimonial has been submitted:"
+msgstr ""
+
+#: includes/class-ajax.php:26
+msgid "Name: %s"
+msgstr ""
+
+#: includes/class-ajax.php:27
+msgid "Email: %s"
+msgstr ""
+
+#: includes/class-ajax.php:28
+msgid "Title: %s"
+msgstr ""
+
+#: includes/class-ajax.php:29
+msgid "Rating: %d/5"
+msgstr ""
+
+#: includes/class-ajax.php:30
+msgid "Review: %s"
+msgstr ""
+
+#: includes/class-ajax.php:31
+msgid "View in admin: %s"
+msgstr ""
