@@ -14,6 +14,26 @@ class TestimonialsPro_Shortcodes {
         add_shortcode('testimonial_grid', array($this, 'testimonial_grid_shortcode'));
     }
     
+    /**
+     * Truncate text to specified word count
+     */
+    private function truncate_text($text, $word_limit = 65) {
+        $words = explode(' ', $text);
+        if (count($words) > $word_limit) {
+            $truncated = implode(' ', array_slice($words, 0, $word_limit));
+            return array(
+                'truncated' => $truncated,
+                'full' => $text,
+                'is_truncated' => true
+            );
+        }
+        return array(
+            'truncated' => $text,
+            'full' => $text,
+            'is_truncated' => false
+        );
+    }
+    
     public function testimonial_form_shortcode($atts) {
         $atts = shortcode_atts(array(), $atts);
         
@@ -115,6 +135,9 @@ class TestimonialsPro_Shortcodes {
                     <p>No testimonials found.</p>
                 <?php else: ?>
                     <?php foreach ($testimonials as $testimonial): ?>
+                        <?php 
+                        $text_data = $this->truncate_text($testimonial->review, 65);
+                        ?>
                         <div class="testimonial-item">
                             <div class="testimonial-content">
                                 <div class="testimonial-rating">
@@ -122,7 +145,13 @@ class TestimonialsPro_Shortcodes {
                                         <span class="star <?php echo $i <= $testimonial->rating ? 'filled' : ''; ?>">★</span>
                                     <?php endfor; ?>
                                 </div>
-                                <p class="testimonial-text">"<?php echo esc_html($testimonial->review); ?>"</p>
+                                <p class="testimonial-text">
+                                    <span class="testimonial-excerpt">"<?php echo esc_html($text_data['truncated']); ?><?php echo $text_data['is_truncated'] ? '...' : ''; ?>"</span>
+                                    <?php if ($text_data['is_truncated']): ?>
+                                        <span class="testimonial-full" style="display: none;">"<?php echo esc_html($text_data['full']); ?>"</span>
+                                        <a href="#" class="read-more-link">Read more...</a>
+                                    <?php endif; ?>
+                                </p>
                                 <div class="testimonial-author">
                                     <strong><?php echo esc_html($testimonial->name); ?></strong>
                                     <?php if ($testimonial->title): ?>
