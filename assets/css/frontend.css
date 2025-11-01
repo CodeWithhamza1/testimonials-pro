@@ -131,6 +131,27 @@
     line-height: 1.5;
 }
 
+.read-more-link {
+    display: inline-block;
+    margin-left: 5px;
+    color: #0073aa;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+    color: #005a87;
+    text-decoration: underline;
+}
+
+.testimonial-excerpt,
+.testimonial-full {
+    display: inline;
+}
+
 .testimonial-author {
     border-top: 1px solid #eee;
     padding-top: 10px;
