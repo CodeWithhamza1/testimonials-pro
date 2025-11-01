@@ -113,6 +113,7 @@ Changes apply automatically to pages rendering the form or grid shortcodes.
 This document focuses on usage and high-level structure and deliberately omits sensitive implementation details.
 
 ### Changelog
+- 1.0.1 — Fixed long reviews display issue by truncating to 65 words with "Read more..." toggle; Fixed false plugin update notifications
 - 1.0.0 — Initial release
 
 ### License
