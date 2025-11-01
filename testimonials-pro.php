@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Testimonials Pro
- * Plugin URI: https://github.com/codewithhamza1
+ * Plugin URI: https://github.com/codewithhamza1/testimonials-pro/
  * Description: Simple testimonial submission and display system with shortcodes.
  * Version: 1.0.1
  * Author: Muhammad Hamza
@@ -296,3 +296,4 @@ class TestimonialsPro {
 
 // Initialize the plugin
 new TestimonialsPro();
+
