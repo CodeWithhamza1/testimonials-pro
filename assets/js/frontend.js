@@ -40,6 +40,28 @@ jQuery(document).ready(function($) {
         $(this).find('.star').removeClass('hover');
     });
     
+    // Handle "Read more..." / "Read less" toggle
+    $(document).on('click', '.read-more-link', function(e) {
+        e.preventDefault();
+        
+        var $this = $(this);
+        var $testimonialText = $this.closest('.testimonial-text');
+        var $excerpt = $testimonialText.find('.testimonial-excerpt');
+        var $full = $testimonialText.find('.testimonial-full');
+        
+        if ($excerpt.is(':visible')) {
+            // Show full text
+            $excerpt.hide();
+            $full.show();
+            $this.text('Read less');
+        } else {
+            // Show excerpt
+            $full.hide();
+            $excerpt.show();
+            $this.text('Read more...');
+        }
+    });
+    
     // Handle testimonial form submission
     $('#testimonial-form').on('submit', function(e) {
         e.preventDefault();
