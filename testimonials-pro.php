@@ -3,14 +3,16 @@
  * Plugin Name: Testimonials Pro
  * Plugin URI: https://github.com/codewithhamza1
  * Description: Simple testimonial submission and display system with shortcodes.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Muhammad Hamza
+ * Author URI: https://github.com/codewithhamza1
  * License: GPL v2 or later
  * Text Domain: testimonials-pro
  * Requires at least: 5.0
  * Tested up to: 6.4
  * Requires PHP: 7.4
  * Network: false
+ * Update URI: false
  */
 
 // Prevent direct access
@@ -19,9 +21,18 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('TESTIMONIALS_PRO_VERSION', '1.0.0');
+define('TESTIMONIALS_PRO_VERSION', '1.0.1');
 define('TESTIMONIALS_PRO_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('TESTIMONIALS_PRO_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+// Prevent false update notifications
+add_filter('site_transient_update_plugins', 'testimonials_pro_disable_updates');
+function testimonials_pro_disable_updates($value) {
+    if (isset($value->response[plugin_basename(__FILE__)])) {
+        unset($value->response[plugin_basename(__FILE__)]);
+    }
+    return $value;
+}
 
 // Main plugin class
 class TestimonialsPro {
